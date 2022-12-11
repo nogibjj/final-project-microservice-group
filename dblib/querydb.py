@@ -2,7 +2,7 @@ from databricks import sql
 import os
 
 
-def querydb(query="SELECT * FROM default.coffee_maker LIMIT 2"):
+def querydb(query="SELECT * FROM default.ds_salaries_csv LIMIT 2"):
     #print("here")
     with sql.connect(
         # server_hostname=os.getenv("DATABRICKS_SERVER_HOSTNAME"),
