@@ -22,5 +22,10 @@ def querydb(query="SELECT * FROM default.ds_salaries_csv LIMIT 2"):
 
     return result
 
+def testdb():
+    largeCQuery = "SELECT salary_in_usd, company_size FROM default.ds_salaries_csv where work_year="+"2020"+" and employment_type=\'"+"FT"+"\' and job_title=\'"+"Data Scientist"+"\' and experience_level=\'"+"SE"+"\' and company_size=\'L\'"
+    largeResult = querydb(largeCQuery)
+    print(type(largeResult))
+
 if __name__ == "__main__":
-    querydb()
+    testdb()
