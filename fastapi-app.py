@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import uvicorn
 from dblib.querydb import querydb
+from dblib.querydb import querySalaryofLevels
 
 app = FastAPI()
 
@@ -16,6 +17,7 @@ async def subt(num1: int, num2: int):
     total = num1 - num2
     return {"result": total}
 
+
 #calculate the average salary in USD in terms of different company size, according to given year, employment type, position and level.
 #eg. root/2020/FT/Data%20Scientist/SE
 def getResultAvr(queryResult):
@@ -25,6 +27,7 @@ def getResultAvr(queryResult):
     for row in queryResult:
         sum+=int(row['salary_in_usd'])
     return round(sum / len(queryResult), 2)
+
 
 @app.get("/{year}/{emtype}/{pos}/{level}")
 async def getSalaryAverageByCsize(year: str, emtype: str, pos:str, level:str):
@@ -39,6 +42,19 @@ async def getSalaryAverageByCsize(year: str, emtype: str, pos:str, level:str):
     ansdict["Average salary of medium size company(USD)"] = getResultAvr(mediumResult)
     ansdict["Average salary of small size company(USD)"] = getResultAvr(smallResult)
     print(ansdict)
+    return ansdict
+
+
+# query 1:
+#   input: job position -- full-time
+#   output: the average salary of different levels in this position in the US from 2020-2022
+@app.get("/salaryofposition/{position}")
+async def getSalaryofPosition(position: str):
+    salarylist_Avg = querySalaryofLevels(position)
+    ansdict = {}
+    ansdict["Average salary of entry level position (USD)"] = salarylist_Avg[0]
+    ansdict["Average salary of medium level position (USD)"] = salarylist_Avg[1]
+    ansdict["Average salary of senior level position (USD)"] = salarylist_Avg[2]
     return ansdict
 
 

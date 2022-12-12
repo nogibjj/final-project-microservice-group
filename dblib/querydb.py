@@ -21,6 +21,8 @@ def querydb(query="SELECT * FROM default.ds_salaries_csv LIMIT 2"):
             print(row)
 
     return result
+
+
 # def getResultAvr(queryResult):
 #     sum = 0
 #     for row in queryResult:
@@ -33,6 +35,28 @@ def querydb(query="SELECT * FROM default.ds_salaries_csv LIMIT 2"):
 #     largeResult = querydb(largeCQuery)
 #     ansdict["Average salary of large size company(USD)"] = getResultAvr(largeResult)
 #     print(ansdict)
+
+
+# query average salary of different levels in one specific position
+def querySalaryofLevels(position):
+    queryentrylevel = "SELECT salary_in_usd From default.ds_salaries_csv where job_title=\'"+position+"\' and experience_level=\'EN\' and employment_type=\'FT\' and company_location=\'US\';"
+    querymediumlevel = "SELECT salary_in_usd From default.ds_salaries_csv where job_title=\'"+position+"\' and experience_level=\'MI\' and employment_type=\'FT\' and company_location=\'US\';"
+    queryseniorlevel = "SELECT salary_in_usd From default.ds_salaries_csv where job_title=\'"+position+"\' and experience_level=\'SE\' and employment_type=\'FT\' and company_location=\'US\';"
+    entryres = querydb(queryentrylevel)
+    mediumres = querydb(querymediumlevel)
+    seniorres = querydb(queryseniorlevel)
+    entryAvg = calSalaryAvg(entryres)
+    mediumAvg = calSalaryAvg(mediumres)
+    seniorAvg = calSalaryAvg(seniorres)
+    return [entryAvg, mediumAvg, seniorAvg]
+
+
+
+def calSalaryAvg(salarylist):
+    sum = 0
+    for salary in salarylist:
+        sum += int(salary["salary_in_usd"])
+    return round(sum / len(salarylist), 2)
    
 
 
