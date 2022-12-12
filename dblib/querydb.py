@@ -21,11 +21,20 @@ def querydb(query="SELECT * FROM default.ds_salaries_csv LIMIT 2"):
             print(row)
 
     return result
+# def getResultAvr(queryResult):
+#     sum = 0
+#     for row in queryResult:
+#         sum+=int(row['salary_in_usd'])
+#     return round(sum / len(queryResult), 2)
 
-def testdb():
-    largeCQuery = "SELECT salary_in_usd, company_size FROM default.ds_salaries_csv where work_year="+"2020"+" and employment_type=\'"+"FT"+"\' and job_title=\'"+"Data Scientist"+"\' and experience_level=\'"+"SE"+"\' and company_size=\'L\'"
-    largeResult = querydb(largeCQuery)
-    print(type(largeResult))
+# def testdb():
+#     ansdict = {}
+#     largeCQuery = "SELECT salary_in_usd, company_size FROM default.ds_salaries_csv where work_year="+"2020"+" and employment_type=\'"+"FT"+"\' and job_title=\'"+"Data Scientist"+"\' and experience_level=\'"+"SE"+"\' and company_size=\'L\'"
+#     largeResult = querydb(largeCQuery)
+#     ansdict["Average salary of large size company(USD)"] = getResultAvr(largeResult)
+#     print(ansdict)
+   
 
-if __name__ == "__main__":
-    testdb()
+
+# if __name__ == "__main__":
+#     testdb()
