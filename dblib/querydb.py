@@ -27,5 +27,15 @@ def testdb():
     largeResult = querydb(largeCQuery)
     print(type(largeResult))
 
+
+## 
+def selectSalary(salary="70000", year="2020"):
+    #sqlquery = "SELECT experience, job_title, company_location, company_size FROM default.ds_salaries_csv where work_year=" + year +" and salary_currency=" + currency + " and salary=" + salary;
+    sqlquery = "SELECT experience_level, job_title, company_location, company_size FROM default.ds_salaries_csv where work_year=" + year + " and salary=" + salary;
+    print(sqlquery)
+    res = querydb(sqlquery)
+    print(type(res))
+
 if __name__ == "__main__":
     testdb()
+    #selectSalary()
