@@ -33,8 +33,8 @@ Pylint : format code
     - /country/{country}/position/{position}
 3. Get job title, company location, experience level by entering expected salary and year
     - salary/{salaryAmout}/year/{year}
-4. Fourth item
-
+4. Get Average salary of this the selected concurrency
+    - /currency/{currency}
 
 ## Deployment
 
