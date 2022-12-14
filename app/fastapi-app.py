@@ -19,9 +19,9 @@ async def root():
     return {"message": "Hello Databricks"}
 
 
-@app.get("/intro/{id}", response_class=HTMLResponse)
-async def read_item(request: Request, id: str):
-    return templates.TemplateResponse("page.html", {"request": request, "id": id})
+@app.get("/intro", response_class=HTMLResponse)
+async def read_item(request: Request):
+    return templates.TemplateResponse("page.html", {"request": request})
 
 @app.get("/subt/{num1}/{num2}")
 async def subt(num1: int, num2: int):
