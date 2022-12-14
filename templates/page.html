@@ -159,7 +159,7 @@
         <label class="list-group-item d-flex gap-3">
           <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
           <span class="pt-1 form-checked-content">
-            <strong>Get different level‘s average salary of specific job title</strong>
+            <strong>Get average salary for different company sizes given year, employment type, position title and level</strong>
             <small class="d-block text-muted">
               <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"/></svg>
               /year/{year}/type/{emtype}/pos/{pos}/level/{level}
@@ -173,6 +173,16 @@
             <small class="d-block text-muted">
               <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#alarm"/></svg>
               /country/{country}/position/{position}
+            </small>
+          </span>
+        </label>
+        <label class="list-group-item d-flex gap-3">
+          <input class="form-check-input form-check-input-placeholder flex-shrink-0 " disabled type="checkbox" value="" style="font-size: 1.375em;">
+          <span class="pt-1 form-checked-content">
+            <span contenteditable="true" class="w-100"><strong>Get average salary of different levels in this position in the US from 2020-2022</strong></span>
+            <small class="d-block text-muted">
+              <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#list-check"/></svg>
+              /salaryofposition/{position}
             </small>
           </span>
         </label>
