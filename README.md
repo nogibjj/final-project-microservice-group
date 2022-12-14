@@ -35,6 +35,8 @@ Pylint : format code
     - salary/{salaryAmout}/year/{year}
 4. Get Average salary of this the selected concurrency
     - /currency/{currency}
+5. Get average salary for different company sizes given year, employment type, position title and level
+    - /year/{year}/type/{emtype}/pos/{pos}/level/{level}
 
 ## Deployment
 
