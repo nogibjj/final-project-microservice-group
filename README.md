@@ -11,6 +11,14 @@ In the final project, we build a web microservice for users to query information
 
 ## Front-end Design
 
+## Dataset
+#### Dataset source
+https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries
+
+#### Dataset table schema
+
+
+
 #### build docker image and run locally
 
 ```docker build .```  
