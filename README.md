@@ -2,7 +2,9 @@
   -- Xuting Wu, Airu Song, Aohua Zhang, Zhengyao Pu
 
 ## Introduction
+In the final project, we build a web microservice for users to query information of tech jobs. We provided some API for users to easily get what they want and they can also custimize that.
 
+## Design Flow Diagram
 #### This a containerized api(FastApi) deployed on AWS, which has continuous delivery feature.
 
 ![Figure](https://github.com/nogibjj/final-project-microservice-group/blob/main/picture.drawio.png)
