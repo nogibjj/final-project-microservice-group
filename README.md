@@ -9,8 +9,6 @@ In the final project, we build a web microservice for users to query information
 
 ![Figure](https://github.com/nogibjj/final-project-microservice-group/blob/main/picture.drawio.png)
 
-## Front-end Design
-
 ## Dataset
 #### Dataset source
 https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries
@@ -18,8 +16,24 @@ https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries
 #### Dataset table schema
 ![Figure](https://github.com/nogibjj/final-project-microservice-group/blob/main/data.png)
 
-## API Details
-```
+## Tools
+Kaggle : Data source <br>
+FastAPI : API development <br>
+Databricks : could data storage <br>
+AWS : auto deployment <br>
+Pylint : format code
+
+## Front-end Design
+
+
+## API
+1. Get the average salary of different levels in this position in the US from 2020-2022
+    - /salaryofposition/{position}
+2. Get average salary of this specific position in this specific country of all levels within the 3 years
+    - /country/{country}/position/{position}
+3. Get job title, company location, experience level by entering expected salary and year
+    - salary/{salaryAmout}/year/{year}
+4. Fourth item
 
 
 ## Deployment
