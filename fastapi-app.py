@@ -3,6 +3,7 @@ import uvicorn
 from dblib.querydb import querydb
 from dblib.querydb import querySalaryofLevels
 from dblib.querydb import selectSalary
+from dblib.querydb import querySalaryofCountryandTitle
 
 app = FastAPI()
 
@@ -68,6 +69,17 @@ async def selectBySalaryAndYear(salary: str, year: str):
     #salarylist_Avg = selectSalary(position)
     res = selectSalary(salary, year)
     return res
+
+# query 3:
+#   input: country and position
+#   output: average salary of this specific position in this specific country of all levels within the 3 years
+@app.get("/country/{country}/position/{position}")
+async def queryBycountry_position(country: str, position: str):
+    res = querySalaryofCountryandTitle(country, position)
+    ansdict = {}
+    ansdict["Average salary of the position: " + position + " in the country: " + country + " (USD)"] = res
+    return ansdict
+
 
 # @app.get("/query")
 # async def query():
