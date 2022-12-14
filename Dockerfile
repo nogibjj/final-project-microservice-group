@@ -3,5 +3,5 @@ WORKDIR /tool
 COPY . /tool
 RUN pip install -r requirements.txt
 EXPOSE 8080
-CMD [ "fastapi-app.py" ]
+CMD [ "/app/fastapi-app.py" ]
 ENTRYPOINT [ "python" ]
