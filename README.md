@@ -20,10 +20,10 @@ https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries
 
 
 ## Tools
-Kaggle : Data source
-FastAPI : API development
-Databricks : could data storage
-AWS : auto deployment
+Kaggle : Data source <br>
+FastAPI : API development <br>
+Databricks : could data storage <br>
+AWS : auto deployment <br>
 Pylint : format code
 
 
