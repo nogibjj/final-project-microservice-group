@@ -1,4 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+
 import uvicorn
 from dblib.querydb import querydb
 from dblib.querydb import querySalaryofLevels
@@ -6,10 +10,18 @@ from dblib.querydb import selectSalary
 
 app = FastAPI()
 
+app.mount("/static", StaticFiles(directory="../static"), name="static")
+templates = Jinja2Templates(directory="../templates")
+#app.mount("/static", StaticFiles(directory="../static"), name="static")
+
 @app.get("/")
 async def root():
     return {"message": "Hello Databricks"}
 
+
+@app.get("/intro/{id}", response_class=HTMLResponse)
+async def read_item(request: Request, id: str):
+    return templates.TemplateResponse("page.html", {"request": request, "id": id})
 
 @app.get("/subt/{num1}/{num2}")
 async def subt(num1: int, num2: int):
