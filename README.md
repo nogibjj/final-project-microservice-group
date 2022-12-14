@@ -15,6 +15,9 @@ https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries
 
 #### Dataset table schema
 ![Figure](https://github.com/nogibjj/final-project-microservice-group/blob/main/data.png)
+:height 10%
+:width: 10%
+:align: center
 
 ## Tools
 Kaggle : Data source <br>
@@ -24,7 +27,7 @@ AWS : auto deployment <br>
 Pylint : format code
 
 ## Front-end Design
-![Figure](https://github.com/nogibjj/final-project-microservice-group/blob/main/front-end.png)
+<img decoding="async" src="https://github.com/nogibjj/final-project-microservice-group/blob/main/front-end.png" width="50%" height="50%">
 
 ## API
 1. Get the average salary of different levels in this position in the US from 2020-2022
