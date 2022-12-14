@@ -149,40 +149,40 @@
         <label class="list-group-item d-flex gap-3">
           <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked style="font-size: 1.375em;">
           <span class="pt-1 form-checked-content">
-            <strong>Finish sales report</strong>
+            <strong>Get Info with salary and year</strong>
             <small class="d-block text-muted">
               <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"/></svg>
-              1:00–2:00pm
+              /salary/{salary}/year/{year}
             </small>
           </span>
         </label>
         <label class="list-group-item d-flex gap-3">
           <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
           <span class="pt-1 form-checked-content">
-            <strong>Weekly All Hands</strong>
+            <strong>Get different level‘s average salary of specific job title</strong>
             <small class="d-block text-muted">
               <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"/></svg>
-              2:00–2:30pm
+              /year/{year}/type/{emtype}/pos/{pos}/level/{level}
             </small>
           </span>
         </label>
         <label class="list-group-item d-flex gap-3">
           <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
           <span class="pt-1 form-checked-content">
-            <strong>Out of office</strong>
+            <strong>Get average salary of specific country and job title</strong>
             <small class="d-block text-muted">
               <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#alarm"/></svg>
-              Tomorrow
+              /country/{country}/position/{position}
             </small>
           </span>
         </label>
-        <label class="list-group-item d-flex gap-3 bg-light">
-          <input class="form-check-input form-check-input-placeholder bg-light flex-shrink-0 pe-none" disabled type="checkbox" value="" style="font-size: 1.375em;">
+        <label class="list-group-item d-flex gap-3">
+          <input class="form-check-input form-check-input-placeholder flex-shrink-0 " disabled type="checkbox" value="" style="font-size: 1.375em;">
           <span class="pt-1 form-checked-content">
-            <span contenteditable="true" class="w-100">Add new task...</span>
+            <span contenteditable="true" class="w-100"><strong>Get average salary of different levels in this position in the US from 2020-2022</strong></span>
             <small class="d-block text-muted">
               <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#list-check"/></svg>
-              Choose list...
+              /salaryofposition/{position}
             </small>
           </span>
         </label>
