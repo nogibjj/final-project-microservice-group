@@ -84,7 +84,11 @@ def querySalaryofCountryandTitle(country, title):
     average_salary = calSalaryAvg(queryres)
     return average_salary
 
-
+def querySalaryByCurrency(currency):
+    querysentence= "SELECT salary_in_usd FROM default.ds_salaries_csv where salary_currency=\'"+currency+"\';"
+    queryres=querydb(querysentence)
+    average_salary=calSalaryAvg(queryres)
+    return average_salary
 
 if __name__ == "__main__":
     selectSalary()

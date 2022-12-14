@@ -4,6 +4,7 @@ from dblib.querydb import querydb
 from dblib.querydb import querySalaryofLevels
 from dblib.querydb import selectSalary
 from dblib.querydb import querySalaryofCountryandTitle
+from dblib.querydb import querySalaryByCurrency
 
 app = FastAPI()
 
@@ -80,7 +81,15 @@ async def queryBycountry_position(country: str, position: str):
     ansdict["Average salary of the position: " + position + " in the country: " + country + " (USD)"] = res
     return ansdict
 
-
+#query 4
+#input : currency
+#output: average salary of the selected currency
+@app.get("/currency/{currency}")
+async def queryByremote_Currency(currency:str):
+    res=querySalaryByCurrency(currency)
+    ans={};
+    ans["Average salary of the salary currency: "+currency+" is "]=res
+    return ans
 # @app.get("/query")
 # async def query():
 #     """Execute a SQL query"""
