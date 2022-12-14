@@ -1,21 +1,3 @@
-# name: Python application test with Github Actions
-
-# on: [push]
-
-# jobs:
-#   build:
-
-#     runs-on: ubuntu-latest
-
-#     steps:
-#     - uses: actions/checkout@v2
-#     - name: Set up Python 3.8
-#       uses: actions/setup-python@v1
-#       with:
-#         python-version: 3.8
-#     - name: Install dependencies
-#       run: |
-#         make install
 name: Deploy to ECR
 
 on:
@@ -50,8 +32,8 @@ jobs:
     - name: Build, tag, and push image to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: proj4
-        IMAGE_TAG: proj4_image
+        ECR_REPOSITORY: finalproj
+        IMAGE_TAG: final_image
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG

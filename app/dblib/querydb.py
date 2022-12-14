@@ -77,5 +77,18 @@ def calSalaryAvg(salarylist):
    
 
 
+# query average salary of this specific position in this specific country of all levels within the 3 years
+def querySalaryofCountryandTitle(country, title):
+    querysentence = "SELECT salary_in_usd From default.ds_salaries_csv where employment_type=\'FT\' and job_title=\'"+title+"\' and company_location=\'"+country+"\';"
+    queryres = querydb(querysentence)
+    average_salary = calSalaryAvg(queryres)
+    return average_salary
+
+def querySalaryByCurrency(currency):
+    querysentence= "SELECT salary_in_usd FROM default.ds_salaries_csv where salary_currency=\'"+currency+"\';"
+    queryres=querydb(querysentence)
+    average_salary=calSalaryAvg(queryres)
+    return average_salary
+
 if __name__ == "__main__":
     selectSalary()
