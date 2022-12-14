@@ -48,3 +48,5 @@ Pylint : format code
 #### build docker image and push to AWS ECR
 
 ```make build```
+
+[![Deploy to ECR](https://github.com/nogibjj/final-project-microservice-group/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/final-project-microservice-group/actions/workflows/main.yml)
