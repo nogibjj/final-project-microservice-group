@@ -16,7 +16,7 @@ In the final project, we build a web microservice for users to query information
 https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries
 
 #### Dataset table schema
-![Figure](https://github.com/nogibjj/final-project-microservice-group/blob/main/picture.drawio.png)
+![Figure](https://github.com/nogibjj/final-project-microservice-group/blob/main/data.png)
 
 
 
