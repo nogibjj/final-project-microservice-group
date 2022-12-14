@@ -24,7 +24,7 @@ AWS : auto deployment <br>
 Pylint : format code
 
 ## Front-end Design
-
+![Figure](https://github.com/nogibjj/final-project-microservice-group/blob/main/front-end.png)
 
 ## API
 1. Get the average salary of different levels in this position in the US from 2020-2022
