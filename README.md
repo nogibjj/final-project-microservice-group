@@ -1,4 +1,8 @@
-# final-project-microservice
+# Final-project-microservice
+  -- Xuting Wu, Airu Song, Aohua Zhang, Zhengyao Pu
+
+## Introduction
+
 #### This a containerized api(FastApi) deployed on AWS, which has continuous delivery feature.
 
 ![Figure](https://github.com/nogibjj/final-project-microservice-group/blob/main/picture.drawio.png)
