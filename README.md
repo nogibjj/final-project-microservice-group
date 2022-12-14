@@ -18,21 +18,11 @@ https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries
 #### Dataset table schema
 ![Figure](https://github.com/nogibjj/final-project-microservice-group/blob/main/data.png)
 
-
-## Tools
-Kaggle : Data source <br>
-FastAPI : API development <br>
-Databricks : could data storage <br>
-AWS : auto deployment <br>
-Pylint : format code
+## API Details
+```
 
 
-## API
-1. First item
-2. Second item
-3. Get job title, company location, experience level by entering expected salary and year
-    - salary/{salaryAmout}/year/{year}
-4. Fourth item
+## Deployment
 
 #### build docker image and run locally
 
